@@ -130,3 +130,13 @@ iconify-icon {
     --project-difficulty-color: white;
     --project-difficulty-color-text: black;
 }
+
+.difficulty-tag {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+
+    background-color: var(--project-difficulty-color, var(--color-200));
+    color: var(--project-difficulty-color-text, var(--color-500));
+    border: 1px solid var(--project-difficulty-color-text, var(--color-500));
+}

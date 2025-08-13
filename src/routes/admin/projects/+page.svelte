@@ -1,6 +1,7 @@
 <script>
 	import { goto, invalidateAll } from '$app/navigation';
 	import { action } from '$lib/client/action.js';
+	import { difficulties } from '$lib/client/difficulties.js';
 
 	let { data } = $props();
 
@@ -34,11 +35,9 @@
 		<div class="project">
 			<img src={project.image} alt={project.name} />
 			<h2>{project.name}</h2>
-			<p class="difficulty">
-				<span data-difficulty={project.difficulty}>
-					{['Blue', 'Green', 'Orange', 'Violet / Pink', 'Black', 'Gray', 'White'][
-						project.difficulty
-					]}
+			<p>
+				<span class="difficulty-tag" data-difficulty={project.difficulty}>
+					{difficulties[project.difficulty].label}
 				</span>
 			</p>
 			<p>{project.createdAt.toLocaleString()}</p>
@@ -126,18 +125,6 @@
 
 				button {
 					flex: 1;
-				}
-			}
-
-			.difficulty {
-				span {
-					display: inline-block;
-					padding: 0.25rem 0.5rem;
-					border-radius: 1rem;
-
-					background-color: var(--project-difficulty-color, var(--color-200));
-					color: var(--project-difficulty-color-text, var(--color-500));
-					border: 1px solid var(--project-difficulty-color-text, var(--color-500));
 				}
 			}
 		}
