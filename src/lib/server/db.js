@@ -2,7 +2,7 @@ import { MONGO_URI } from '$env/static/private';
 import { MongoClient } from 'mongodb';
 
 const client = new MongoClient(MONGO_URI);
-const taskliner = client.db('taskliner');
+const taskliner = client.db('boulder-games');
 
 /**
  * @template {import('mongodb').Document} [TSchema=import('mongodb').Document]
