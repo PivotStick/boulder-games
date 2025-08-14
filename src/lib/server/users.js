@@ -1,4 +1,4 @@
-import { Collection } from './collection';
+import { Collection } from './Collection';
 
 /**
  * @extends {Collection<{
