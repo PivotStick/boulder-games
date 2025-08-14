@@ -30,6 +30,8 @@
 
 <h1>Projects</h1>
 
+<a href="/">Home</a>
+
 <div class="projects">
 	{#each data.projects as project}
 		<div class="project">
